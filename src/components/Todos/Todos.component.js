@@ -10,7 +10,15 @@ const Todos = props => {
       <div>
         {
           list && list.length ? (
-            list.map((todo, index) => <Todo key={todo.id} index={index} onClickDelete={deleteMethod} text={todo.text} />)
+            list.map(
+              (todo, index) => (
+                <Todo
+                  key={todo.id}
+                  index={index}
+                  onClickDelete={deleteMethod}
+                  text={todo.text} />
+              )
+            )
           ) : 'You\'re all done 🌴'
         }
       </div>
