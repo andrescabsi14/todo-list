@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './NewTodo.component.css';
 
 const NewTodo = props => {
   const { item, change, add } = props;

@@ -1,0 +1,17 @@
+.todo-list .todo-item {
+    padding: 20px 0;
+    position: relative;
+}
+
+.todo-list .todo-item:not(:first-child) {
+    border-top: 1px solid #ddd;
+}
+
+.todo-list .todo-item span {
+    color: #ff585d;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}

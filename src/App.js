@@ -3,6 +3,7 @@ import { uniqueId } from 'lodash';
 
 import Todos from './components/Todos/Todos.component';
 import NewTodo from './components/NewTodo/NewTodo.component';
+import Counter from './components/Counter/Counter.component';
 
 class App extends Component {
 
@@ -14,9 +15,6 @@ class App extends Component {
   componentDidUpdate = (prevProps, prevState) => {
     const { todos: prevTodos } = prevState;
     const { todos } = this.state;
-    if ( prevTodos.length !== todos.length ) {
-      document.querySelector('#counter').innerText = todos.length;
-    }
   }
 
   handleChange = event => this.setState({ todo: event.target.value });
@@ -27,7 +25,6 @@ class App extends Component {
   };
 
   handleClickDelete = index => {
-    console.log(`Deleting todo number ${index}`);
     const { todos } = this.state;
     this.setState({ todos: [
       ...todos.slice(0, index),
@@ -47,7 +44,7 @@ class App extends Component {
     return (
       <div className="todo-list">
         <h1>todos</h1>
-        <p><span id="counter">1</span> remaining</p>
+        <Counter count={todos.length} />
         <Todos list={todos} deleteMethod={this.handleClickDelete} />
         <NewTodo item={todo} change={this.handleChange} add={this.handleClickAdd} />
       </div>

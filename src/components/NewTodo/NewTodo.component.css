@@ -1,0 +1,26 @@
+.todo-input {
+    margin-top: 40px;
+}
+
+.todo-input * {
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 32px;
+    vertical-align: middle;
+}
+
+input {
+    padding: 0 10px;
+    width: 70%;
+}
+
+button {
+    background: #2ad5c4;
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.27);
+    color: #fff;
+    margin-left: 4%;
+    width: 25%;
+    cursor: pointer;
+}
